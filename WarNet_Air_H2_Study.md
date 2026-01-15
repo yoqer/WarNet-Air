@@ -63,6 +63,10 @@ El Gateway Central T4 mantiene el control de la misión y la gestión de energí
 
 El **WarNet Air-H2** es un concepto de dirigible de alta eficiencia y control preciso. La clave de su viabilidad reside en la miniaturización de la **Pila de Combustible Reversible** y la optimización del sistema de gestión de energía para el seguimiento solar y la electrólisis. Este diseño ofrece una solución elegante al problema del control de altitud en aerostatos pequeños.
 
+![61033+S20AL _AC_UF894,1000_QL80_FMwebp_](https://github.com/user-attachments/assets/7e923690-918f-4e76-881e-5db3102b9d69)
+
+
+
 ---
 ## Referencias
 
