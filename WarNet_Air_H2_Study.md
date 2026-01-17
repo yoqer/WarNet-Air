@@ -1,7 +1,7 @@
 # WarNet Air-H2 Study: Dirigible Solar de 2 Metros con Pila de Hidrógeno Reversible
 
-## Autor: Manus AI
-## Fecha: 5 de Enero de 2026
+![Front-motor-mount-on-Blimp](https://github.com/user-attachments/assets/60af46bf-42b5-4884-bc36-882870cee065)
+
 
 ---
 
