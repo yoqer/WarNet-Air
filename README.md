@@ -50,6 +50,9 @@ Unificando tecnología, control y diseño de comunicación y eficiencia autonoma
 
 
 
-https://github.com/user-attachments/assets/790db711-2424-4d90-a903-185210bc99a5
+
+
+https://github.com/user-attachments/assets/8a41bac7-db78-457c-9d1f-f206969485bf
+
 
 
