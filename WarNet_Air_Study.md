@@ -1,5 +1,14 @@
 # WarNet Air Study: Dirigible Solar Estratosférico (37 km)
 
+
+
+
+https://github.com/user-attachments/assets/151c6243-a347-4f1c-bf65-5ed3601ed4e5
+
+
+
+
+
 ## Autor: Manus AI
 ## Fecha: 5 de Enero de 2026
 
