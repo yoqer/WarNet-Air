@@ -1,5 +1,5 @@
 Manual de las Compras Online:
-AUTODIRIGIBLE WARNET Lata Cax.
+Lata a la Fresca: WARNET Cax.
 
 
 
@@ -31,7 +31,24 @@ Enlaces priorizados por precio bajo (AliExpress > Alibaba > Amazon/eBay). Febrer
 ## Recomendaciones Generales
 - **AliExpress** → Mejor para la mayoría de componentes electrónicos y solares (elige vendedores con miles de ventas y >4.8 estrellas).
 - **Alibaba** → Para cantidades o materiales raw (Mylar, Li-S si existen proveedores).
+
+
 - **Amazon** → Más rápido y confiable, pero 2–5× más caro en muchos casos.
 - Componentes custom o de nicho aeroespacial (RFC real, Li-S, Iridium, turbinas estratosféricas) no serán baratos → presupuesta prototipos caros o desarrollo propio.
 - Verifica compatibilidad (voltajes, interfaces I2C/SPI/UART) y lee datasheets.
+
+
+
+
+______________________________
+
+
+#Enleces de Interes: Colaboradores y Proveedores#
+
+**WordlView**
+
+**Palantic**
+
+**WarNet**
+
 
