@@ -52,7 +52,7 @@ ______________________________
 
 
 
-[**WarNet**](http://github.com/yoqer/play-warnet)
+[**WarNet**](http://github.com/yoqer/Warnet-Game)
 
 
 
