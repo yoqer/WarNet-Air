@@ -1,10 +1,10 @@
-unManual de las Compras Online:
+Manual de las Compras Online:
 Lata a la Fresca: WARNET Cax.
 
 
 
 
-# Lista de Componentes para Dirigible Estratosférico Autónomo - Enlaces a Compra Barata
+# Lista de Componentes para Dirigible Estratosférico Autónomo.
 
 Proyecto de dirigible con autonomía extrema (solar + RFC + H₂).  
 Enlaces priorizados por precio bajo (AliExpress > Alibaba > Amazon/eBay). Febrero 2026 – precios aproximados y variables.
@@ -39,6 +39,7 @@ Enlaces priorizados por precio bajo (AliExpress > Alibaba > Amazon/eBay). Febrer
 
 
 
+https://github.com/user-attachments/assets/8a41bac7-db78-457c-9d1f-f206969485bf
 
 ______________________________
 
@@ -47,7 +48,7 @@ ______________________________
 
 [**Controlar Vuelo**](https://es.scribd.com/document/510046197/Capitulo-2-Controles-de-vuelo)
 
-[**WordlView**](https://es.gizmodo.com/descargar/nasa-worldview)
+[**WorldView**](https://es.gizmodo.com/descargar/nasa-worldview)
 
 [**Palantir**](http://palantir.com)
 
