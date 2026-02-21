@@ -47,7 +47,7 @@ ______________________________
 
 **WordlView**
 
-**Palantic**
+[**Palantir**](http://palantir.com)
 
 **WarNet**
 
