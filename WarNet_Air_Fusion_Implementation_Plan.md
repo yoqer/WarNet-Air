@@ -1,7 +1,9 @@
 # Plan de Implementación del Proyecto WarNet Air-Fusion
 
-## Autor: Manus AI
-## Fecha: 5 de Enero de 2026
+
+
+https://github.com/user-attachments/assets/e838ea81-d07a-4057-b276-e2e8eea4cb3f
+
 
 ---
 
