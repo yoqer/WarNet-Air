@@ -1,7 +1,10 @@
 # WarNet Air-Fusion Study: Dirigible Estratosférico Híbrido de Energía y Flotación
 
-## Autor: Manus AI
-## Fecha: 5 de Enero de 2026
+
+
+https://github.com/user-attachments/assets/74ee402b-1e23-4024-a68c-a9a3fe44275c
+
+
 
 ---
 
