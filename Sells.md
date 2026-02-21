@@ -43,13 +43,15 @@ Enlaces priorizados por precio bajo (AliExpress > Alibaba > Amazon/eBay). Febrer
 ______________________________
 
 
-#Enleces de Interes: Colaboradores y Proveedores#
+#Enleces de Interes: Referencias, Colaboradores y Proveedores#
+
+[**Controlar Vuelo**](https://es.scribd.com/document/510046197/Capitulo-2-Controles-de-vuelo)
 
 **WordlView**
 
 [**Palantir**](http://palantir.com)
 
-**WarNet**
+[**WarNet**](http://github.com/yoqer/play-warnet)
 
 [**Indra**](https://www.indragroup.com/es/noticias/indra-group-creara-en-leon-la-principal-y-mas-avanzada-fabrica-de-drones-multiproposito-de-espana-para-dar-respuesta-a-los-programas-especiales-de-modernizacion)
 
