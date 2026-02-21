@@ -1,4 +1,4 @@
-Manual de las Compras Online:
+unManual de las Compras Online:
 Lata a la Fresca: WARNET Cax.
 
 
@@ -47,7 +47,7 @@ ______________________________
 
 [**Controlar Vuelo**](https://es.scribd.com/document/510046197/Capitulo-2-Controles-de-vuelo)
 
-**WordlView**
+[**WordlView**](https://es.gizmodo.com/descargar/nasa-worldview)
 
 [**Palantir**](http://palantir.com)
 
