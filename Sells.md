@@ -50,10 +50,14 @@ ______________________________
 
 [**WorldView**](https://es.gizmodo.com/descargar/nasa-worldview)
 
-[**Palantir**](http://palantir.com)
+
 
 [**WarNet**](http://github.com/yoqer/play-warnet)
 
+
+
 [**Indra**](https://www.indragroup.com/es/noticias/indra-group-creara-en-leon-la-principal-y-mas-avanzada-fabrica-de-drones-multiproposito-de-espana-para-dar-respuesta-a-los-programas-especiales-de-modernizacion)
 
+
+[**Palantir**](http://palantir.com)
 
