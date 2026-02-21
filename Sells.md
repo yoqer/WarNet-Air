@@ -44,9 +44,9 @@ https://github.com/user-attachments/assets/8a41bac7-db78-457c-9d1f-f206969485bf
 ______________________________
 
 
-#Enleces de Interes: Referencias, Colaboradores y Proveedores#
+# Enlaces de Interes: Referencias, Proveedores...
 
-[**Controlar Vuelo**](https://es.scribd.com/document/510046197/Capitulo-2-Controles-de-vuelo)
+[**Controles Vuelo**](https://es.scribd.com/document/510046197/Capitulo-2-Controles-de-vuelo)
 
 [**WorldView**](https://es.gizmodo.com/descargar/nasa-worldview)
 
