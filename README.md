@@ -45,4 +45,11 @@ Diseñar un sistema de control de altitud y energía que combine la **seguridad 
 3.  **Sistema de Visión de Largo Alcance:** Integración de una cámara con zoom óptico y procesamiento de imágenes por TinyML en el ESP32-S3 para la detección de objetivos a gran distancia.
 4.  **Protocolo de Comunicación Unificado:** Definición del protocolo de telemetría y comando LoRaWAN para que el Gateway Central T4 pueda gestionar ambos tipos de dirigibles (Air y Air-H2) de forma transparente.
 
-Este estudio de fusión sentará las bases para el prototipo final de la plataforma aérea WarNet.
+Este estudio de fusión sienta las bases para el prototipo final de la plataforma aérea WarNet.
+Unificando tecnología, control y diseño de comunicación y eficiencia autonoma.
+
+
+
+https://github.com/user-attachments/assets/790db711-2424-4d90-a903-185210bc99a5
+
+
