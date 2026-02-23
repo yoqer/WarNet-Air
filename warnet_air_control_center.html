@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WarNet Air-Fusion | Mission Control Center</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            color: #00ff00;
+            overflow: hidden;
+        }
+
+        .mission-control {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: 60px 1fr 120px;
+            height: 100vh;
+            gap: 5px;
+            padding: 5px;
+            background: #0a0e27;
+        }
+
+        /* Header */
+        .header {
+            grid-column: 1 / -1;
+            background: linear-gradient(90deg, #1a1f3a 0%, #2d3561 50%, #1a1f3a 100%);
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+        }
+
+        .header h1 {
+            font-size: 24px;
+            text-shadow: 0 0 10px #00ff00;
+            letter-spacing: 2px;
+        }
+
+        .status-indicator {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #00ff00;
+            box-shadow: 0 0 10px #00ff00;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Left Panel - Telemetría */
+        .left-panel {
+            grid-column: 1;
+            grid-row: 2;
+            background: #1a1f3a;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            padding: 15px;
+            overflow-y: auto;
+            box-shadow: inset 0 0 20px rgba(0, 255, 0, 0.1);
+        }
+
+        .telemetry-section {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #00ff00;
+            padding-bottom: 15px;
+        }
+
+        .telemetry-section:last-child {
+            border-bottom: none;
+        }
+
+        .telemetry-label {
+            font-size: 12px;
+            color: #00cc00;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .telemetry-value {
+            font-size: 18px;
+            color: #00ff00;
+            text-shadow: 0 0 5px #00ff00;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .telemetry-bar {
+            width: 100%;
+            height: 8px;
+            background: #0a0e27;
+            border: 1px solid #00ff00;
+            border-radius: 3px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+
+        .telemetry-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00ff00, #00cc00);
+            box-shadow: 0 0 10px #00ff00;
+            transition: width 0.3s ease;
+        }
+
+        /* Center Panel - WorldView & Map */
+        .center-panel {
+            grid-column: 2;
+            grid-row: 2;
+            background: #1a1f3a;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            padding: 15px;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+            box-shadow: inset 0 0 20px rgba(0, 255, 0, 0.1);
+        }
+
+        .worldview-panel {
+            background: #0a0e27;
+            border: 1px solid #00ff00;
+            border-radius: 3px;
+            padding: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .worldview-panel h3 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #00ff00;
+            text-shadow: 0 0 5px #00ff00;
+        }
+
+        .worldview-image {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            border: 1px dashed #00ff00;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #00cc00;
+            font-size: 12px;
+            position: relative;
+        }
+
+        .satellite-marker {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #ff0000;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #ff0000;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .map-panel {
+            background: #0a0e27;
+            border: 1px solid #00ff00;
+            border-radius: 3px;
+            padding: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .map-panel h3 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #00ff00;
+            text-shadow: 0 0 5px #00ff00;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            border: 1px dashed #00ff00;
+            position: relative;
+        }
+
+        .gps-marker {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background: #00ff00;
+            border-radius: 50%;
+            box-shadow: 0 0 15px #00ff00;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .gps-marker::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border: 2px solid #00ff00;
+            border-radius: 50%;
+            top: -7px;
+            left: -7px;
+            animation: radar-pulse 2s infinite;
+        }
+
+        @keyframes radar-pulse {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(2); opacity: 0; }
+        }
+
+        /* Right Panel - Controles */
+        .right-panel {
+            grid-column: 3;
+            grid-row: 2;
+            background: #1a1f3a;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            padding: 15px;
+            overflow-y: auto;
+            box-shadow: inset 0 0 20px rgba(0, 255, 0, 0.1);
+        }
+
+        .control-section {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #00ff00;
+            padding-bottom: 15px;
+        }
+
+        .control-section:last-child {
+            border-bottom: none;
+        }
+
+        .control-label {
+            font-size: 12px;
+            color: #00cc00;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .control-button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 8px;
+            background: #0a0e27;
+            border: 2px solid #00ff00;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            cursor: pointer;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+        }
+
+        .control-button:hover {
+            background: #00ff00;
+            color: #0a0e27;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+        }
+
+        .control-button.active {
+            background: #00ff00;
+            color: #0a0e27;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+        }
+
+        .control-button.danger {
+            border-color: #ff0000;
+            color: #ff0000;
+            box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+        }
+
+        .control-button.danger:hover {
+            background: #ff0000;
+            color: #fff;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+        }
+
+        /* Footer - Consola de Comandos */
+        .footer {
+            grid-column: 1 / -1;
+            grid-row: 3;
+            background: #0a0e27;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            padding: 10px 15px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            box-shadow: inset 0 0 20px rgba(0, 255, 0, 0.1);
+        }
+
+        .command-input {
+            flex: 1;
+            background: #1a1f3a;
+            border: 1px solid #00ff00;
+            color: #00ff00;
+            padding: 8px 12px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            border-radius: 3px;
+        }
+
+        .command-input::placeholder {
+            color: #00cc00;
+            opacity: 0.5;
+        }
+
+        .command-input:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+
+        .command-send {
+            padding: 8px 20px;
+            background: #00ff00;
+            border: 1px solid #00ff00;
+            color: #0a0e27;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            cursor: pointer;
+            border-radius: 3px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .command-send:hover {
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+        }
+
+        .command-log {
+            flex: 0 0 200px;
+            background: #1a1f3a;
+            border: 1px solid #00ff00;
+            color: #00ff00;
+            padding: 8px 12px;
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            border-radius: 3px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0a0e27;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #00ff00;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00cc00;
+        }
+    </style>
+</head>
+<body>
+    <div class="mission-control">
+        <!-- Header -->
+        <div class="header">
+            <h1><i class="fas fa-satellite"></i> WarNet Air-Fusion | Mission Control</h1>
+            <div class="status-indicator">
+                <span>STATUS: OPERATIONAL</span>
+                <div class="status-dot"></div>
+            </div>
+        </div>
+
+        <!-- Left Panel - Telemetría -->
+        <div class="left-panel">
+            <div class="telemetry-section">
+                <div class="telemetry-label">Altitud</div>
+                <div class="telemetry-value" id="altitude">37,000 m</div>
+                <div class="telemetry-bar">
+                    <div class="telemetry-bar-fill" style="width: 85%;"></div>
+                </div>
+            </div>
+
+            <div class="telemetry-section">
+                <div class="telemetry-label">Presión Atmosférica</div>
+                <div class="telemetry-value" id="pressure">0.85 hPa</div>
+                <div class="telemetry-bar">
+                    <div class="telemetry-bar-fill" style="width: 15%;"></div>
+                </div>
+            </div>
+
+            <div class="telemetry-section">
+                <div class="telemetry-label">Temperatura Externa</div>
+                <div class="telemetry-value" id="temperature">-56°C</div>
+                <div class="telemetry-bar">
+                    <div class="telemetry-bar-fill" style="width: 5%;"></div>
+                </div>
+            </div>
+
+            <div class="telemetry-section">
+                <div class="telemetry-label">Energía Solar</div>
+                <div class="telemetry-value" id="solar-energy">78%</div>
+                <div class="telemetry-bar">
+                    <div class="telemetry-bar-fill" style="width: 78%;"></div>
+                </div>
+            </div>
+
+            <div class="telemetry-section">
+                <div class="telemetry-label">Energía Eólica</div>
+                <div class="telemetry-value" id="wind-energy">45%</div>
+                <div class="telemetry-bar">
+                    <div class="telemetry-bar-fill" style="width: 45%;"></div>
+                </div>
+            </div>
+
+            <div class="telemetry-section">
+                <div class="telemetry-label">H2 Almacenado</div>
+                <div class="telemetry-value" id="h2-storage">92%</div>
+                <div class="telemetry-bar">
+                    <div class="telemetry-bar-fill" style="width: 92%;"></div>
+                </div>
+            </div>
+
+            <div class="telemetry-section">
+                <div class="telemetry-label">Batería Litio</div>
+                <div class="telemetry-value" id="battery">88%</div>
+                <div class="telemetry-bar">
+                    <div class="telemetry-bar-fill" style="width: 88%;"></div>
+                </div>
+            </div>
+
+            <div class="telemetry-section">
+                <div class="telemetry-label">Velocidad del Viento</div>
+                <div class="telemetry-value" id="wind-speed">42 km/h</div>
+            </div>
+
+            <div class="telemetry-section">
+                <div class="telemetry-label">Velocidad Aérea</div>
+                <div class="telemetry-value" id="airspeed">8 m/s</div>
+            </div>
+        </div>
+
+        <!-- Center Panel - WorldView & Map -->
+        <div class="center-panel">
+            <div class="worldview-panel">
+                <h3><i class="fas fa-image"></i> WorldView | Satellite Imagery</h3>
+                <div class="worldview-image">
+                    <div class="satellite-marker" style="top: 35%; left: 45%;"></div>
+                    <div class="satellite-marker" style="top: 60%; left: 70%; animation-delay: 0.3s;"></div>
+                    <div class="satellite-marker" style="top: 25%; left: 75%; animation-delay: 0.6s;"></div>
+                    <span>Satellite Feed: Waiting for Imagery Stream...</span>
+                </div>
+            </div>
+
+            <div class="map-panel">
+                <h3><i class="fas fa-map"></i> GPS RTK | Real-time Tracking</h3>
+                <div id="map">
+                    <div class="gps-marker"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel - Controles -->
+        <div class="right-panel">
+            <div class="control-section">
+                <div class="control-label">Modo de Vuelo</div>
+                <button class="control-button active" onclick="setFlightMode('loitering')">Loitering</button>
+                <button class="control-button" onclick="setFlightMode('wind-facing')">Wind-Facing</button>
+                <button class="control-button" onclick="setFlightMode('descent')">Descent</button>
+            </div>
+
+            <div class="control-section">
+                <div class="control-label">Energía</div>
+                <button class="control-button active" onclick="toggleSystem('solar')">Solar ON</button>
+                <button class="control-button active" onclick="toggleSystem('wind')">Wind ON</button>
+                <button class="control-button active" onclick="toggleSystem('h2')">H2 ON</button>
+            </div>
+
+            <div class="control-section">
+                <div class="control-label">Sensores</div>
+                <button class="control-button active" onclick="toggleSystem('gps')">GPS ON</button>
+                <button class="control-button active" onclick="toggleSystem('imu')">IMU ON</button>
+                <button class="control-button active" onclick="toggleSystem('anemometer')">Anemometer ON</button>
+            </div>
+
+            <div class="control-section">
+                <div class="control-label">Comunicaciones</div>
+                <button class="control-button active" onclick="toggleSystem('lorawan')">LoRaWAN ON</button>
+                <button class="control-button" onclick="toggleSystem('wifi')">WiFi OFF</button>
+                <button class="control-button" onclick="toggleSystem('iridium')">Iridium OFF</button>
+            </div>
+
+            <div class="control-section">
+                <div class="control-label">Contramedidas</div>
+                <button class="control-button danger" onclick="toggleSystem('jammer')">Jammer OFF</button>
+                <button class="control-button" onclick="toggleSystem('evasion')">Evasion OFF</button>
+            </div>
+
+            <div class="control-section">
+                <div class="control-label">Emergencia</div>
+                <button class="control-button danger" onclick="emergencyShutdown()">EMERGENCY SHUTDOWN</button>
+            </div>
+        </div>
+
+        <!-- Footer - Consola de Comandos -->
+        <div class="footer">
+            <input type="text" class="command-input" id="commandInput" placeholder="Ingrese comando (ej: ALTITUDE +1000, HEADING 180)..." onkeypress="handleCommandKey(event)">
+            <button class="command-send" onclick="sendCommand()">ENVIAR</button>
+            <div class="command-log" id="commandLog">Ready for commands...</div>
+        </div>
+    </div>
+
+    <script>
+        // Simulación de telemetría
+        function updateTelemetry() {
+            const altitude = Math.floor(37000 + (Math.random() - 0.5) * 200);
+            const pressure = (0.85 + (Math.random() - 0.5) * 0.1).toFixed(2);
+            const temperature = Math.floor(-56 + (Math.random() - 0.5) * 5);
+            const solarEnergy = Math.floor(70 + Math.random() * 20);
+            const windEnergy = Math.floor(30 + Math.random() * 30);
+            const h2Storage = Math.floor(85 + Math.random() * 10);
+            const battery = Math.floor(80 + Math.random() * 15);
+            const windSpeed = Math.floor(30 + Math.random() * 30);
+            const airspeed = (5 + Math.random() * 8).toFixed(1);
+
+            document.getElementById('altitude').textContent = altitude.toLocaleString() + ' m';
+            document.getElementById('pressure').textContent = pressure + ' hPa';
+            document.getElementById('temperature').textContent = temperature + '°C';
+            document.getElementById('solar-energy').textContent = solarEnergy + '%';
+            document.getElementById('wind-energy').textContent = windEnergy + '%';
+            document.getElementById('h2-storage').textContent = h2Storage + '%';
+            document.getElementById('battery').textContent = battery + '%';
+            document.getElementById('wind-speed').textContent = windSpeed + ' km/h';
+            document.getElementById('airspeed').textContent = airspeed + ' m/s';
+        }
+
+        function setFlightMode(mode) {
+            const buttons = document.querySelectorAll('.control-section:first-child .control-button');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            logCommand(`FLIGHT MODE: ${mode.toUpperCase()}`);
+        }
+
+        function toggleSystem(system) {
+            event.target.classList.toggle('active');
+            const status = event.target.classList.contains('active') ? 'ON' : 'OFF';
+            logCommand(`${system.toUpperCase()}: ${status}`);
+        }
+
+        function sendCommand() {
+            const input = document.getElementById('commandInput');
+            const command = input.value.trim();
+            if (command) {
+                logCommand(`> ${command}`);
+                input.value = '';
+            }
+        }
+
+        function handleCommandKey(event) {
+            if (event.key === 'Enter') {
+                sendCommand();
+            }
+        }
+
+        function logCommand(message) {
+            const log = document.getElementById('commandLog');
+            log.textContent = message;
+        }
+
+        function emergencyShutdown() {
+            if (confirm('¿Confirmar APAGADO DE EMERGENCIA del WarNet Air-Fusion?')) {
+                logCommand('EMERGENCY SHUTDOWN INITIATED');
+                alert('Sistema en modo de emergencia. Iniciando descenso controlado...');
+            }
+        }
+
+        // Actualizar telemetría cada 2 segundos
+        setInterval(updateTelemetry, 2000);
+
+        // Inicializar
+        updateTelemetry();
+        logCommand('WarNet Air-Fusion Mission Control Ready');
+    </script>
+</body>
+</html>
