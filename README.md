@@ -1,58 +1,40 @@
-# WarNet Air: Estudios de Arquitectura de Dirigibles Estratosféricos
+# WarNet-Air: Plataforma Aérea Estratosférica Autónoma
 
-Este repositorio contiene los estudios de arquitectura para dos conceptos de dirigibles solares de alta altitud, diseñados para integrarse como nodos de observación y comunicación en la red WarNet, controlados por el Gateway Central T4.
+## Descripción del Proyecto
 
-## 1. WarNet Air Study (Globo Sonda Estratosférico)
+**WarNet-Air** es un ecosistema de investigación y desarrollo enfocado en la creación de plataformas aéreas autónomas para la estratosfera (aproximadamente 37 km de altitud). El proyecto integra tecnologías de vanguardia en energía híbrida, flotación reversible, comunicaciones de largo alcance e inteligencia artificial para misiones de observación, vigilancia y comunicación de larga duración.
 
-Este estudio se centra en un dirigible de gran escala (37 km de altitud) con enfoque en la permanencia y la comunicación de largo alcance.
+El sistema está diseñado para ser controlado y orquestado por el **Gateway Central T4**, actuando como una extensión aérea de la red robótica WarNet.
 
-| Característica | Detalle |
-| :--- | :--- |
-| **Escala** | Gran Altitud (37 km - Estratosfera) |
-| **Energía** | Panel Solar Flexible + Baterías de Litio-Sulfuro (Li-S) |
-| **Flotación** | Helio/Hidrógeno (Control de altitud por compresión/válvula) |
-| **Comunicaciones** | LoRaWAN (Primario) + Iridium SBD (Respaldo Satelital) |
-| **Control** | ESP32-S3 (GNC) |
+## Estudios Técnicos y Documentación
 
-**Documento de Referencia:** `WarNet_Air_Study.md`
+El repositorio contiene una serie de estudios técnicos que evolucionan desde conceptos básicos hasta una arquitectura de fusión avanzada:
 
-## 2. WarNet Air-H2 Study (Dirigible de Hidrógeno Reversible)
+1.  **[WarNet Air Study](War_Net_Air_Study.md):** Investigación inicial sobre dirigibles estratosféricos de gran escala, materiales y sistemas de control GNC.
+2.  **[WarNet Air-H2 Study](War_Net_Air_H2_Study.md):** Estudio de un dirigible de hidrógeno reversible de 2 metros, introduciendo el concepto de flotación por ciclo cerrado H₂O ↔ H₂.
+3.  **[WarNet Air-Fusion Study](War_Net_Air_Fusion_Study.md):** La culminación tecnológica que integra energía solar, eólica y de hidrógeno reversible en una plataforma de alta eficiencia.
+4.  **[Desglose de Ingeniería Mecánica y Materiales](WarNet_Air_Fusion_Mechanical_Engineering_Breakdown.md):** Detalle exhaustivo de piezas, materiales resistentes a la estratosfera (Mylar, Fibra de Carbono), integración de motores Taurus (Indra/Edge) y sistemas de captación de agua (Aquaer).
+5.  **[Algoritmo de Vuelo Autónomo](warnet_air_fusion_flight_algorithm.md):** Lógica de control para el mantenimiento de posición (loitering), orientación contra el viento y gestión de energía híbrida ejecutada en el ESP32-S3.
+6.  **[Integración de Comunicaciones y Sensores](WarNet_Air_Fusion_Communication_Sensor_Integration.md):** Detalle de la instalación de la antena MIMO de alta ganancia y la red de sensores aeronáuticos (GPS RTK, IMU, Anemómetro ultrasónico).
+7.  **[Plan de Implementación](WarNet_Air_Fusion_Implementation_Plan.md):** Hoja de ruta estratégica de 18 meses para el desarrollo, prototipado y despliegue operativo.
 
-Este estudio se centra en un dirigible de escala reducida (máximo 2 metros) con un sistema de energía y flotación innovador de ciclo cerrado.
+## Características Principales
 
-| Característica | Detalle |
-| :--- | :--- |
-| **Escala** | Miniatura (Máx. 2 metros) |
-| **Energía** | Pila de Combustible Reversible (RFC) + Solar con Seguimiento |
-| **Flotación** | Hidrógeno (H₂) generado por electrólisis (Control de altitud activo H₂O ↔ H₂) |
-| **Comunicaciones** | LoRaWAN |
-| **Control** | ESP32-S3 (Gestión de Energía y RFC) |
+*   **Energía Triple Híbrida:** Combinación de paneles solares plegables con seguimiento solar, micro-turbinas eólicas de alta altitud y pila de combustible reversible (RFC).
+*   **Flotación Reversible:** Control activo de la altitud mediante la conversión electroquímica de agua en hidrógeno, eliminando la necesidad de lastre.
+*   **Resiliencia Estratosférica:** Materiales seleccionados para soportar temperaturas de -60°C, baja presión y alta radiación UV.
+*   **Inteligencia en el Borde:** Procesamiento de misión y toma de decisiones autónomas mediante un LLM reducido (TinyLLM) en el ESP32-S3.
+*   **Comunicación Robusta:** Enlace primario LoRaWAN de largo alcance con respaldo satelital Iridium SBD y antena Wi-Fi MIMO de alta ganancia.
 
-**Documento de Referencia:** `WarNet_Air_H2_Study.md`
+## Cómo Contribuir
 
-## 3. Próximo Estudio: WarNet Air-Fusion (Integración y Optimización)
+Este es un proyecto de código abierto y experimental. Se invita a investigadores, ingenieros y entusiastas de la robótica aeroespacial a contribuir en las áreas de:
+*   Optimización de algoritmos de GNC.
+*   Mejora de la eficiencia de la RFC y los sistemas de captación de agua.
+*   Diseño de estructuras ultraligeras y resistentes.
+*   Integración de nuevos sensores y cargas útiles.
 
-El siguiente paso en el desarrollo de la plataforma WarNet Air es un estudio de fusión que aborde las limitaciones de ambos conceptos y optimice la integración con el Gateway Central T4.
-
-### 3.1. Objetivo del Estudio
-
-Diseñar un sistema de control de altitud y energía que combine la **seguridad del ciclo cerrado H₂O ↔ H₂** (de Air-H2) con la **capacidad de carga y altitud** (de Air).
-
-### 3.2. Puntos Clave a Investigar
-
-1.  **Optimización de la RFC para la Estratosfera:** ¿Es viable escalar la Pila de Combustible Reversible para manejar el volumen de gas necesario a 37 km?
-2.  **Control de Flotabilidad Híbrido:** Diseño de un sistema que utilice la RFC para el control fino de altitud y un sistema de calentamiento/compresión para el control grueso.
-3.  **Sistema de Visión de Largo Alcance:** Integración de una cámara con zoom óptico y procesamiento de imágenes por TinyML en el ESP32-S3 para la detección de objetivos a gran distancia.
-4.  **Protocolo de Comunicación Unificado:** Definición del protocolo de telemetría y comando LoRaWAN para que el Gateway Central T4 pueda gestionar ambos tipos de dirigibles (Air y Air-H2) de forma transparente.
-
-Este estudio de fusión sienta las bases para el prototipo final de la plataforma aérea WarNet.
-Unificando tecnología, control y diseño de comunicación y eficiencia autonoma.
-
-
-
-
-
-https://github.com/user-attachments/assets/8a41bac7-db78-457c-9d1f-f206969485bf
-
-
-
+---
+**Autor:** Manus AI
+**Licencia:** Apache 2.0
+**Repositorio:** [https://github.com/yoqer/WarNet-Air](https://github.com/yoqer/WarNet-Air)
