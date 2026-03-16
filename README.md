@@ -10,7 +10,7 @@ El sistema está diseñado para ser controlado y orquestado por el **Gateway Cen
 
 El repositorio contiene una serie de estudios técnicos que evolucionan desde conceptos básicos hasta una arquitectura de fusión avanzada:
 
-1.  **[WarNet Air Study](War_Net_Air_Study.md):** Investigación inicial sobre dirigibles estratosféricos de gran escala, materiales y sistemas de control GNC.
+1.  **[WarNet Air Study](https://github.com/yoqer/WarNet-Air/blob/main/WarNet_Air_Study.md):** Investigación inicial sobre dirigibles estratosféricos de gran escala, materiales y sistemas de control GNC.
 2.  **[WarNet Air-H2 Study](https://github.com/yoqer/WarNet-Air/blob/main/WarNet_Air_H2_Study.md):** Estudio de un dirigible de hidrógeno reversible de 2 metros, introduciendo el concepto de flotación por ciclo cerrado H₂O ↔ H₂.
 3.  **[WarNet Air-Fusion Study](https://github.com/yoqer/WarNet-Air/blob/main/WarNet_Air_Fusion_Study.md):** La culminación tecnológica que integra energía solar, eólica y de hidrógeno reversible en una plataforma de alta eficiencia.
 4.  **[Desglose de Ingeniería Mecánica y Materiales](WarNet_Air_Fusion_Mechanical_Engineering_Breakdown.md):** Detalle exhaustivo de piezas, materiales resistentes a la estratosfera (Mylar, Fibra de Carbono), integración de motores Taurus (Indra/Edge) y sistemas de captación de agua (Aquaer).
