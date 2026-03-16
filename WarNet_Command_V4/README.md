@@ -20,7 +20,7 @@ WarNet Command Center V4 es una interfaz web profesional de mando y control para
 - 🌤️ **Planificación:** Predicción meteorológica 15d → tiempo real
 - ⚡ **Sensores:** Telemetría en tiempo real
 - 🌐 **Visualización 3D:** CesiumJS (opcional)
-- 🏙️ **Infraestructura:** Control de dispositivos urbanos
+- 🏙️ **Infraestructura:** Control de dispositivos urbanos, trafico, webcam.
 - 🔓 **Hacker:** [Controles](https://github.com/yoqer/WarNet-SoftWAir) avanzados infraestructura, frecuencia, servicios, red.
 
 ✅ **APIs Operativas:**
