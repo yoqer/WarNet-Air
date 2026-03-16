@@ -336,7 +336,7 @@ Este proyecto está bajo licencia MIT. Ver [LICENSE](LICENSE) para más detalles
 
 ---
 
-## 📞 Es Posible:  ejercitar derecho a su acceso, oposición, rectificación, cancelación o modificación:
+## 📞 Es Posible:  ejercitar derecho del acceso, oposición, rectificación, cancelación o modificación:
 
 - **Email:** support@warnet.dev
 - **Issues:** https://github.com/yoqer/WarNet-Air/issues
