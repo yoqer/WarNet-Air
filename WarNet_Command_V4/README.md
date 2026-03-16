@@ -16,7 +16,7 @@ WarNet Command Center V4 es una interfaz web profesional de mando y control para
 
 ✅ **7 Módulos Operativos:**
 - 🗺️ **Mapa:** Integración Google Maps + NASA GIBS
-- 📡 **Radar:** Detección 2D/3D de señales
+- 📡 **Radar:** Detección 2D/3D de señales: [radio, geolocalizacion y OVNIs...](https://github.com/yoqer/WarNet-Radar)
 - 🌤️ **Planificación:** Predicción meteorológica 15d → tiempo real
 - ⚡ **Sensores:** Telemetría en tiempo real
 - 🌐 **Visualización 3D:** CesiumJS (opcional)
