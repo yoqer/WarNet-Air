@@ -12,7 +12,7 @@ El repositorio contiene una serie de estudios técnicos que evolucionan desde co
 
 1.  **[WarNet Air Study](War_Net_Air_Study.md):** Investigación inicial sobre dirigibles estratosféricos de gran escala, materiales y sistemas de control GNC.
 2.  **[WarNet Air-H2 Study](War_Net_Air_H2_Study.md):** Estudio de un dirigible de hidrógeno reversible de 2 metros, introduciendo el concepto de flotación por ciclo cerrado H₂O ↔ H₂.
-3.  **[WarNet Air-Fusion Study](War_Net_Air_Fusion_Study.md):** La culminación tecnológica que integra energía solar, eólica y de hidrógeno reversible en una plataforma de alta eficiencia.
+3.  **[WarNet Air-Fusion Study](https://github.com/yoqer/WarNet-Air/blob/main/WarNet_Air_Fusion_Study.md):** La culminación tecnológica que integra energía solar, eólica y de hidrógeno reversible en una plataforma de alta eficiencia.
 4.  **[Desglose de Ingeniería Mecánica y Materiales](WarNet_Air_Fusion_Mechanical_Engineering_Breakdown.md):** Detalle exhaustivo de piezas, materiales resistentes a la estratosfera (Mylar, Fibra de Carbono), integración de motores Taurus (Indra/Edge) y sistemas de captación de agua (Aquaer).
 5.  **[Algoritmo de Vuelo Autónomo](warnet_air_fusion_flight_algorithm.md):** Lógica de control para el mantenimiento de posición (loitering), orientación contra el viento y gestión de energía híbrida ejecutada en el ESP32-S3.
 6.  **[Integración de Comunicaciones y Sensores](WarNet_Air_Fusion_Communication_Sensor_Integration.md):** Detalle de la instalación de la antena MIMO de alta ganancia y la red de sensores aeronáuticos (GPS RTK, IMU, Anemómetro ultrasónico).
