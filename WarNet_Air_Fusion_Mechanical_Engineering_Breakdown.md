@@ -93,4 +93,7 @@ El algoritmo de vuelo, detallado en `warnet_air_fusion_flight_algorithm.md`, se 
 
 ## 7. Conclusión
 
-Este desglose de ingeniería mecánica y de materiales para el WarNet Air-Fusion proporciona una base sólida para la construcción de un dirigible estratosférico de vanguardia. La integración de tecnologías de energía híbrida, flotación reversible y una red de sensores aeronáuticos avanzados, junto con un algoritmo de vuelo autónomo, permitirá misiones de larga duración y alta eficiencia en la estratosfera. La miniaturización de tecnologías industriales como los motores Taurus y los sistemas Aquaer es clave para el éxito de este proyecto. Este diseño es un paso crucial hacia la realización de una plataforma aérea autónoma y sostenible. Los modelos pequeños solo usan [Water Absorcion.](https://youtu.be/Wtw5E7DCri8?is=5f3n1SCR-ZPGfF6P).
+Este desglose de ingeniería mecánica y de materiales para el WarNet Air-Fusion proporciona una base sólida para la construcción de un dirigible estratosférico de vanguardia. La integración de tecnologías de energía híbrida, flotación reversible y una red de sensores aeronáuticos avanzados, junto con un algoritmo de vuelo autónomo, permitirá misiones de larga duración y alta eficiencia en la estratosfera. La miniaturización de tecnologías industriales como los motores Taurus y los sistemas Aquaer es clave para el éxito de este proyecto. Este diseño es un paso crucial hacia la realización de una plataforma aérea autónoma y sostenible. Los modelos pequeños solo utilizan: [Water Absocion.](https://youtu.be/Wtw5E7DCri8?is=5f3n1SCR-ZPGfF6P).
+
+
+
