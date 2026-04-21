@@ -44,13 +44,6 @@ Este es un proyecto de código abierto y experimental. Se invita a investigadore
 8. [Interfaz de Control Web](warnet_air_control_center.html): Centro de mando operativo (C2) con integración de WorldView y telemetría estratosférica.
 
 
-Web Operativa: 
 
-
-
-
-
-
-Inicio Rápido:
-
-Descarga el paquete, sigue el manual, desplegar y a jugar.
+### Web Operativa: WarNet 
+Intergalactic Security Policemen.
