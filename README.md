@@ -39,6 +39,18 @@ Este es un proyecto de código abierto y experimental. Se invita a investigadore
 
 **Licencia:** Apache 2.0
 
-**Repositorio:** [https://github.com/yoqer/WarNet-Air](https://github.com/yoqer/WarNet-Air)
+**Repositorio:** (Este) [https://github.com/yoqer/WarNet-Air](https://github.com/yoqer/WarNet-Air)
 
 8. [Interfaz de Control Web](warnet_air_control_center.html): Centro de mando operativo (C2) con integración de WorldView y telemetría estratosférica.
+
+
+Web Operativa: 
+
+
+
+
+
+
+Inicio Rápido:
+
+Descarga el paquete, sigue el manual, desplegar y a jugar.
