@@ -55,4 +55,6 @@ Este es un proyecto de código abierto y experimental. Se invita a investigadore
 
 Inicio [Rápido](https://github.com/yoqer/WarNet-Air/blob/Host/WarNet%20Command%20V4%20-%20Gu%C3%ADa%20R%C3%A1pida%20de%20Deployment.md):
 
-Descarga el paquete, sigue el manual, desplegar y a jugar.
+[Descarga](https://github.com/yoqer/WarNet-Air/blob/Host/WarNet-Command-V4-Production-Fixed.zip) el paquete, sigue el manual, desplegar y a jugar.
+
+Guia Materiales para Compras Online.
