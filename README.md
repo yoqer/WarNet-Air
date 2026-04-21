@@ -47,3 +47,10 @@ Este es un proyecto de código abierto y experimental. Se invita a investigadore
 
 ### Web Operativa: WarNet 
 Intergalactic Security Policemen.
+
+
+
+
+Guia Materiales: Compras
+[Online](https://github.com/yoqer/WarNet-Air/blob/main/Sells.md).
+
