@@ -57,4 +57,5 @@ Inicio [Rápido](https://github.com/yoqer/WarNet-Air/blob/Host/WarNet%20Command%
 
 [Descarga](https://github.com/yoqer/WarNet-Air/blob/Host/WarNet-Command-V4-Production-Fixed.zip) el paquete, sigue el manual, desplegar y a jugar.
 
-Guia Materiales para Compras Online.
+Guia Materiales: Compras
+[Online](https://github.com/yoqer/WarNet-Air/blob/Host/Sells.md).
