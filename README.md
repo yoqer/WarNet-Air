@@ -37,14 +37,16 @@ Este es un proyecto de código abierto y experimental. Se invita a investigadore
 ---
 **Autor:** Manus AI
 
-**Licencia:** Apache 2.0
+**Licencia:** Indios Apaches de Web 2.0
 
 **Repositorio:** (Este) [https://github.com/yoqer/WarNet-Air](https://github.com/yoqer/WarNet-Air)
 
 8. [Interfaz de Control Web](warnet_air_control_center.html): Centro de mando operativo (C2) con integración de WorldView y telemetría estratosférica.
 
 
-Web Operativa: 
+
+
+### Web Operativa: WarNet
 
 
 
