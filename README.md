@@ -51,6 +51,6 @@ Web Operativa:
 
 
 
-Inicio Rápido:
+Inicio [Rápido](https://github.com/yoqer/WarNet-Air/blob/Host/WarNet%20Command%20V4%20-%20Gu%C3%ADa%20R%C3%A1pida%20de%20Deployment.md):
 
 Descarga el paquete, sigue el manual, desplegar y a jugar.
